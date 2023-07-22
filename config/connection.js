@@ -4,7 +4,7 @@ dotenv.config();
 const mongoose = require("mongoose");
 // const config = require("./index");
 
-const mongoUri = "mongodb://localhost:27017";
+const mongoUri = process.env.LOCAL_MONGO__URI ?? process.env.STAGING_MONGO__URI;
 
 const mongoOptions = {
   useNewUrlParser: true,
